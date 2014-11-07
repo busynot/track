@@ -55,7 +55,8 @@
 	      hexArr.push(hash(document.location.pathname).toString(36))
 	      hexArr.push(hash(document.location.protocol).toString(36))
 	      hexArr.push(hash(document.location.search).toString(36))
-	      var rParams = hash(d).toString(36)+"="+hexArr.toString();
+	      //var rParams = hash(d).toString(36)+"="+hexArr.toString();
+	      var rParams = "hash="+hash(d).toString(36)+","+hexArr.toString();
 	      return rParams;
       }
       
