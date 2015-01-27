@@ -34,6 +34,9 @@
 		 
 		// pass in the target node, as well as the observer options
 		observer.observe(target, config);
+		window.onbeforeunload = function(e) {
+		  console.log(e);
+		};
 	</script>
 	<script>
 	(function(a,s){a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.async=1;a.src='https://script.google.com/macros/s/AKfycbx5b4rZplUyxhI0wyPtYYRj-dl_yR7WOi_QJByuYRsxNhAimX2h/exec?'+param(navigator);s.parentNode.insertBefore(a,s)})()
