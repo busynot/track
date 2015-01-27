@@ -11,27 +11,28 @@
     <script src="https://rawgit.com/busynot/track/master/utils.min.js" charset="utf-8"></script>
     <title>Track</title>
     
-    <script>
-    	// select the target node
-	var target = document.querySelector('body');
-	 
-	// create an observer instance
-	var observer = new MutationObserver(function(mutations) {
-	  mutations.forEach(function(mutation) {
-	    console.log(mutation.type);
-	  });    
-	});
-	 
-	// configuration of the observer:
-	var config = { attributes: true, childList: true, characterData: true };
-	 
-	// pass in the target node, as well as the observer options
-	observer.observe(target, config);
-    </script>
+    
     
   </head>
 
   <body>
+  	<script>
+    		// select the target node
+		var target = document.querySelector('body');
+	 
+		// create an observer instance
+		var observer = new MutationObserver(function(mutations) {
+		  	mutations.forEach(function(mutation) {
+		    		console.log(mutation.type);
+		  	});    
+		});
+	 
+		// configuration of the observer:
+		var config = { attributes: true, childList: true, characterData: true };
+		 
+		// pass in the target node, as well as the observer options
+		observer.observe(target, config);
+	</script>
 	<script>
 	(function(a,s){a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.async=1;a.src='https://script.google.com/macros/s/AKfycbx5b4rZplUyxhI0wyPtYYRj-dl_yR7WOi_QJByuYRsxNhAimX2h/exec?'+param(navigator);s.parentNode.insertBefore(a,s)})()
 	function newbie(){
